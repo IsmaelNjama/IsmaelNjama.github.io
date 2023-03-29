@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div>
+        <nav class="nav-item">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section>
+        <h2>Contact Form</h2>
+        <form id="myform" action="https://formspree.io/f/mayzblrq" method="POST">
+            <fieldset class="fm">
+                <legend>Your Contact Information</legend>
+                <label class="important" for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname" placeholder="First name" required>
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname" placeholder="Last Name">
+                <label class="important" for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Your email" required>
+                <label class="important" for="phone">Your Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="No space between numbers" required>
+            </fieldset>
+            <fieldset>
+                <legend class="important">Add your comments</legend>
+                <textarea name="comments" placeholder="Your comments here" cols="48" rows="22" required></textarea>
+            </fieldset>
+            <fieldset>
+                <label class="important" for="date">Which date are you available to be contacted?</label>
+                <input type="date" id="date" name="date" required>
+            </fieldset>
+            <button type="submit" id="my-submit-btn" disabled>Submit</button>
+        </form>
+    </section>
+    <footer>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+        <p id="coding"></p>
+    </footer>
+    <script src="../js/form.js"></script>
+    <script src="../js/footer.js"></script>
+</body>
+</html>

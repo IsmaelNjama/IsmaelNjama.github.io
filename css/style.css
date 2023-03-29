@@ -1,0 +1,234 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Bona Nova', serif;
+  height: 100vh;
+  background-color: #eef1e8;
+  /*border: 5px solid red;*/
+}
+
+h2 {
+  font-weight: bolder;
+  color: royalblue;
+}
+.card {
+  align-items: center;
+  background-color: lightgray;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  padding: 30px;
+}
+
+.card ul{
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card li{
+  margin-right: 5px;
+}
+
+.card a{
+  text-decoration: none;
+  font-size: 30px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.card a:hover{
+  background-color: gray;
+}
+
+
+.nav-item ul{
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  height: 20px;
+  top: 0px;
+  width: 100%;
+  background-color: #808080;
+  /*border: 1px solid red;*/
+}
+
+.nav-item li{
+  margin-right: 3px;
+}
+
+.nav-item a{
+  text-decoration: none;
+  color: black;
+  background-color: beige;
+  border-radius: 3px;
+  padding: 1.5px;
+}
+
+
+.nav-item a:hover{
+  background-color: #00FFFF;
+}
+
+.page-wrapper {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  /*border: 3px solid blue;*/
+}
+
+.profile-image {
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+}
+
+footer {
+  background-color: #0D2050;
+  font-size: 1rem;
+  margin-left: 0;
+  width: 100%;
+  margin-top: 25px;
+  /*position: fixed;*/
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #0D2050;
+  /*border: 2px solid red;*/
+}
+
+footer li {
+  display: inline-block;
+  margin-right: 0.75px;
+}
+
+footer a{
+  text-decoration: none;
+  color: black;
+  background-color: #0bb5ee;
+  border-radius: 3px;
+}
+
+footer p{
+  color: white;
+}
+
+footer a:hover {
+  background-color: yellowgreen;
+}
+
+
+.cntct{
+  display: flex;
+  flex-wrap: nowrap;
+  border-bottom: 0.1rem solid rgb(160, 97, 97);
+}
+
+.cntct p {
+  color: #474747;
+  font-weight: bolder;
+}
+
+.frm {
+  flex: 1 0 20%;
+}
+
+.cntct div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+  border: 1px solid blue;
+  border-radius: 3px;
+  border-inline-color:green;
+}
+
+.city{
+  border-top: 0.1rem solid maroon;
+  /*border: 3px solid green;*/
+}
+
+.city div {
+  margin-bottom: 1rem;
+}
+
+.city p, li {
+  color: #474747;
+  font-weight: bolder;
+}
+
+.map{
+  display: none;
+}
+
+.active{
+  display: block;
+}
+
+.maps{
+  width: 25%;
+  display: flex;
+}
+
+
+.btns{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: none;  
+}
+
+.btns :disabled {
+  background-color: #777;
+  cursor: not-allowed;
+}
+
+.important:after{
+  content:'*';
+  color:red;
+  font-weight: bold;
+}
+
+@keyframes proflimage{
+  0% {border: 2px solid orange;}
+  25% {border: 2px dashed yellow;}
+  50% {border: 2px solid green;}
+  75% {border: 4px dashed blue;}
+  100% {border: 5px solid indigo;}
+}
+
+#profile-image:hover{
+  animation-name: proflimage;
+  animation-duration: 1s;
+}
+
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.card li:hover{
+  animation-name: spin;
+  animation-duration: 2s;
+}
+
+#my-submit-btn{
+  color: black;
+  margin-top: 15px;
+}
+
+#my-submit-btn:disabled{
+  cursor: not-allowed;
+}
