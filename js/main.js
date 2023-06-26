@@ -1,28 +1,19 @@
-//replace with your user:
-const GITHUB_URL = "https://api.github.com/users/IsmaelNjama";
 
-// fetch(GITHUB_URL)
-//   .then(function(response) {
-//     return response.json();
-//   })
-//   .then(function (data) {
-//     const avatarUrl = data.avatar_url;
-//     const img = document.createElement('img');
-//     img.src = avatarUrl;
-//     img.alt = 'Njama Peter Ismael';
-//     const profileNme = data.name;
-//     const profileImage = document.getElementById("profile-image").src = avatarUrl;
-//     const profileName = document.getElementById("profile-name").textContent = profileNme;
-//      //update the profileImage and profileName with the information retrieved.
-    
-//   });
+const GITHUB_URL = "https://api.github.com/users/IsmaelNjama";
 
 async function getUserProfile() {
   const response = await fetch(GITHUB_URL);
   const data = await response.json();
-  console.log(data);
+
   const image = data.avatar_url;
-  console.log(image);
+  const imageDiv = document.getElementById('profileImage');
+  imageDiv.src = data.avatar_url;
+  imageDiv.alt = 'Njama Peter Ismael';
+
+  const profileNameDiv = data.name;
+  const profileNameHolder = document.getElementById('profileName');
+  profileNameHolder.innerHTML = profileNameDiv;
+
   
 }
 
